@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8"/>
+    <title>Сервіс Обліку Студентів</title>
+    <meta name="description"
+          value="Система Обліку Студенів Навчального закладу"/>
+
+    <!-- Include Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap.min.css">
+    <!--<style type="text/css">.col-xs-12, .col-xs-4, .col-xs-8 {border:1px solid red;}</style>-->
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+<body>
+<!-- Start Container -->
+<div class="container">
+
+    <!-- Start Header -->
+    <div class="row" id="header">
+        <!-- Logo -->
+        <div class="col-xs-12">
+            <h1>Форма редагування Студента</h1>
+        </div>
+
+        <div class="form-container">
+
+            <form enctype="multipart/form-data" action="" method="post">
+                <div class="row">
+                    <div class="fld-text col-xs-2">
+                        <p align="right"><label for="name"> Ім'я<sup>*</sup> </label></p>
+                    </div>
+                    <div class="fld-in col-xs-10">
+                        <input name="user_name" id="name" type="text" required="required">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-2">
+                        <p align="right"><label for="fio"> По-батькові </label></p>
+                    </div>
+                    <div class="fld-in col-xs-10">
+                        <input name="po_batke" id="fio" type="text">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div id="prizvuche" class="fld-text col-xs-2">
+                        <p align="right"><label for="family"> Прізвище </label></p>
+                    </div>
+                    <div class="fld-in col-xs-10">
+                        <input name="prizvuche" id="family" type="text"
+                               required="required">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div id="nomer_bilety" class="fld-text col-xs-2">
+                        <p align="right"><label for="bilet"> № Білету </label></p>
+                    </div>
+                    <div class="fld-in col-xs-10">
+                        <input name="nomer_bilety" id="bilet" type="text"
+                               required="required">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div id="dat_narodgenya" class="fld-text col-xs-2">
+                        <p align="right"><label for="data_nar"> Дата народження </label></p>
+                    </div>
+                    <div class="fld-in col-xs-10">
+                        <input name="dat_narodgenya" id="data_nar" type="text">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div id="foto" class="fld-text col-xs-2">
+                        <p align="right"><label for="foto"> Фото </label></p>
+                    </div>
+                    <div class="fld-in col-xs-10">
+                        <p> Наразі: <a href="">./img/me.jpg</a>
+                            <button type="submit" class="btn btn-default">Очистити</button>
+                        </p>
+
+                        <p><label for="file_cng"> Змінити </label>
+                            <input name="change_file" id="file_cng" type="file"></p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div id="group_select" class="fld-text col-xs-2">
+                        <p align="right"><label for="select_grp"> Група </label></p>
+                    </div>
+                    <div class="fld-in col-xs-10">
+                        <select name="group_select" id="select_grp" required="required">
+                            <option id="field13-1" value="МтМ-21">
+                                МтМ-21
+                            </option>
+                            <option id="field13-2" value="МтМ-22">
+                                МтМ-22
+                            </option>
+                            <option id="field13-3" value="МтМ-23">
+                                МтМ-23
+                            </option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div id="textarea" class="fld-text col-xs-2">
+                        <p align="right"><label for="tx_area"> Додаткові Нотатки </label></p>
+                    </div>
+                    <div class="fld-in col-xs-10">
+                        <textarea rows="5" cols="15" name="dod_note" id="notatku"></textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div id="foot" class="fld-text col-xs-2">
+                    </div>
+                    <div class="fld-in col-xs-10">
+                        <input value="Зберегти" type="submit">
+                        <input value="Скасувати" type="submit">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</div>
+
+</div>
+
+
+<!-- Javascripts Section -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+
+</body>
+
+
+</html>
