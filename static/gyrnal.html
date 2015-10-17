@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8"/>
+    <title>Сервіс Обліку Студентів</title>
+    <meta name="description"
+          value="Система Обліку Студенів Навчального закладу"/>
+
+    <!-- Include Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap.min.css">
+    <!--<style type="text/css">.col-xs-12, .col-xs-4, .col-xs-8 {border:1px solid red;}</style>-->
+
+    <!-- include main.css -->
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- include міняєм Class="pager" для навігації по Місяцях і Роках -->
+    <link rel="stylesheet" href="./css/gyrnal_style.css">
+
+
+</head>
+
+<body>
+<!-- Start Container -->
+<div class="container">
+
+    <!-- Start Header -->
+    <div class="row" id="header">
+        <!-- Logo -->
+        <div class="col-xs-8">
+            <h1>Сервіс Обліку Студентів</h1>
+        </div>
+
+        <!-- Groups Selector -->
+        <div class="col-xs-4" id="group-selector">
+            <strong>Група:</strong>
+            <select>
+                <option value="">Усі Студенти</option>
+                <option value="">МтМ - 21, Подоба Віталій (№ 254)</option>
+                <option value="">МтМ - 22, Корост Андрій (№ 2123)</option>
+            </select>
+        </div>
+    </div>
+    <!-- End Header -->
+
+    <!-- Start SubHeader -->
+    <div class="row" id="sub-header">
+        <div class="col-xs-12">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" ><a href="#">Студенти</a></li>
+                <li role="presentation" class="active"><a href="#">Відвідування</a></li>
+                <li role="presentation" ><a href="#">Групи</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End SubHeader -->
+
+    <!-- Start Main Page Content -->
+    <div class="row" id="content-columns">
+        <div class="col-xs-12" id="content-column">
+            <!-- Status Message -->
+            <!-- <div class="alert alert-warning">Зміни скасовано.</div> -->
+
+            <h2> Облік Відвідування </h2>
+
+            <!-- Add Student Button -->
+           <!--  <a class="btn btn-primary" href="#">Додати Групу</a> -->
+
+
+            <!-- Start Students Listing -->
+            <!-- start Gyrnal Table modifications -->
+
+            <!-- Navigaciya po Mounth -->
+               <nav>
+                <ul class="pager" id="my_pager" >
+                    <li ><a href="#">&larr;</a></li>
+                    Жовтень 2015
+                    <li ><a href="#">&rarr;</a></li>
+
+                </ul>
+            </nav>
+
+            <!-- <table class="table  table-striped">   -->
+            <table >
+                <thead>
+               <tr>
+                          <th>№</th>
+                          <th>Студент</th>
+                          <th>Ср 1 </th>
+                          <th>Чт 2 </th>
+                          <th>Пн 3 </th>
+                          <th>Сб 4 </th>
+                          <th>Нд 5 </th>
+                          <th>Пн 6</th>
+                          <th>Вт 7</th>
+                          <th>Ср 8</th>
+                          <th>Чт 9</th>
+                          <th>Пн 10</th>
+                          <th>Сб 11</th>
+                          <th>НД 12</th>
+                          <th>Пн 13</th>
+                          <th>Вт 14</th>
+                          <th>Ср 15</th>
+                          <th>Чт 16</th>
+                          <th>Пн 17</th>
+                          <th>Сб 18</th>
+                          <th>НД 19</th>
+                          <th>Пн 20</th>
+                          <th>Вт 21</th>
+                          <th>Ср 22</th>
+                          <th>Чт 23</th>
+                          <th>Пн 24</th>
+                          <th>Сб 25</th>
+                          <th>НД 26</th>
+                          <th>Пн 27</th>
+                          <th>Вт 28</th>
+                          <th>Ср 29</th>
+                          <th>Чт 30</th>
+                          <th>Пн 31</th>
+                         </tr>
+                </thead>      
+                <tbody>
+                <tr>
+                    <td> 1 </td>
+                    <td> <a title="Редагувати" href="#">Петров Назар </a> </td>
+                    <td> <input type="checkbox" checked> </td>
+                    <td> <input type="checkbox" checked> </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" > </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" checked> </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" > </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" checked>  </td>
+                </tr>
+                <!--Second rows-->
+                 <tr>
+                    <td> 2 </td>
+                    <td> <a title="Редагувати" href="#">Іванов Степан</a> </td>
+                    <td> <input type="checkbox" > </td>
+                    <td> <input type="checkbox" > </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" > </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" > </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" > </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                </tr>
+                <!--Thirth rows -->
+                <tr>
+                    <td> 3 </td>
+                    <td> <a title="Редагувати" href="#">Приблуда Семен</a> </td>
+                    <td> <input type="checkbox" > </td>
+                    <td> <input type="checkbox" > </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" > </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" > </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" > </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                </tr>
+                </tbody>
+            </table>
+            <!-- End Students Listing -->
+            <!-- Pagination -->
+            <nav>
+                <ul class="pagination">
+<!--                   <li><a href="#">&laquo;</a></li>-->
+                    <li class="active"><a href="#">1</a></li>
+                    <li ><a href="#">2</a></li>
+                    <li><a href="#">Далі</a></li>
+                </ul>
+            </nav>
+
+
+        </div>
+
+    </div>
+</div>
+<!-- End Main Page Content -->
+
+<!-- Start Footer -->
+<div class="row" id="footer">
+    <div class="col-xs-12">
+        &copy; 2014 Сервіс Обліку Студентів
+    </div>
+</div>
+<!-- End Footer -->
+
+</div>
+<!-- End Container -->
+
+<!-- Javascripts Section -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+
+</body>
+
+
+</html>

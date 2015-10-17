@@ -1,0 +1,33 @@
+/* Це коментар в CSS */
+
+#my_pager li > a
+  {
+    /*display:inline-block;*/
+    padding:5px 14px;
+    /*background-color:#fff;*/
+    border:0px solid #ddd;
+    /*border-radius:15px*/
+}
+#my_pager li> a:hover,#my_pager li>a:focus
+{
+    text-decoration:none;
+    background-color:#ff9900
+}
+#my_pager .next>a{
+    float:right
+}
+#my_pager .previous>a
+{
+    float:left
+}
+
+
+table {
+    border: 1px solid lightgray;
+    border-collapse: collapse
+}
+
+td,th {
+    border: 1px solid lightgray;
+    padding: 10px;
+}
