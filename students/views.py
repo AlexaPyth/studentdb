@@ -27,3 +27,5 @@ def groups_edit(request, gid):
 
 def groups_delete(request, gid):
     return HttpResponse("Groups delete %s" % gid)
+
+#Views for Journal
