@@ -25,7 +25,6 @@ urlpatterns = [
     url(r'^students/(?P<sid>\d+)/edit/$', 'students.views.students_edit', name='students_edit'),
     url(r'^students/(?P<sid>\d+)/delete/$', 'students.views.students_delete', name='students_delete'),
 
-
     #Groups List urls
     url(r'^groups/$', 'students.views.groups_list', name='groups'),
     url(r'^groups/add/$', 'students.views.groups_add', name='groups_add'),
