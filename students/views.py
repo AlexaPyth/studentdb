@@ -19,7 +19,7 @@ def students_list(request):
          'first_name': 'Віталій',
          'last_name': 'Пдоба',
          'ticket': 2127,
-         'image': 'iimg/podoba.jpg'},
+         'image': 'img/podoba.jpg'},
     )
     return render(request, "students/students_list.html", {'students':students})
 
