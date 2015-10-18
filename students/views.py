@@ -15,11 +15,11 @@ def students_list(request):
          'last_name': 'Пивовар',
          'ticket': 2125,
          'image': 'img/piv.jpg'},
-        {'id':1,
+        {'id':3,
          'first_name': 'Віталій',
          'last_name': 'Пдоба',
          'ticket': 2127,
-         'image': 'iimg/podoba.jpg'},
+         'image': 'img/podoba.jpg'},
     )
     return render(request, "students/students_list.html", {'students':students})
 
