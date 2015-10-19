@@ -3,27 +3,30 @@ from django.shortcuts import render
 # Create your views here.
 from django.http import HttpResponse
 # Views for Students
-def students_list(request):
-    students = (
+students = (
         {'id':1,
          'first_name': 'Андрій',
          'last_name': 'Корост',
          'ticket': 2123,
-         'group':'МтМ-21',
          'image': 'img/me.jpg'},
         {'id':2,
          'first_name': 'Орест',
          'last_name': 'Пивовар',
          'ticket': 2125,
-         'group':'МтМ-22',
          'image': 'img/piv.jpg'},
-        {'id':3,
+        {'id': 3,
          'first_name': 'Віталій',
          'last_name': 'Пдоба',
          'ticket': 2127,
-         'group':'МтМ-23',
          'image': 'img/podoba.jpg'},
     )
+groups = (
+    {'id': 1, 'group_name': 'МтМ-21', 'starosta': 'Ячменев Олег' },
+    {'id': 2, 'group_name': 'МтМ-22',  'starosta': 'Петров Семен'  },
+    {'id': 3, 'group_name': 'МтМ-23', 'starosta': 'Іванов Олег' },
+)
+
+def students_list(request):
     return render(request, "students/students_list.html", {'students':students})
 
 def students_add(request):
@@ -37,7 +40,7 @@ def students_delete(request, sid):
 
 # Views for Groups
 def groups_list(request):
-    return HttpResponse("Groups list")
+    return render(request, "students/groups_list.html", {'groups':groups})
 
 def groups_add(request):
     return HttpResponse("Groups add")
