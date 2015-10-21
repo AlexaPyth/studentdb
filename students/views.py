@@ -30,6 +30,8 @@ def students_list(request):
     return render(request, "students/students_list.html", {'students':students})
 
 def students_add(request):
+    # testa = request.META['SERVER_NAME']
+    # print(request.build_absolute_uri('/'))
     return HttpResponse("Add students")
 
 def students_edit(request, sid):
