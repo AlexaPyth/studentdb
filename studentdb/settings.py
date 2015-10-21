@@ -16,7 +16,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Моя змінна - абсолютне посилання на корінь аплікації.
-PORTAL_URL = 'http://localhost:8000'
+# PORTAL_URL = 'http://127.0.0.1:8000'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
@@ -67,7 +67,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 # 'django.core.context_processors.request',
-                 'studentsdb.context_processors.students_proc',
+                "studentdb.context_processors.students_proc",
             ],
         },
     },
