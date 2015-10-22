@@ -62,9 +62,14 @@
                          </tr>
                 </thead>
                 <tbody>
+                {% for sfio in students_j %}
+
+
+
+
                 <tr>
-                    <td> 1 </td>
-                    <td> <a title="Редагувати" href="#">Петров Назар </a> </td>
+                    <td> {{ forloop.counter }} </td>
+                    <td> <a title="Редагувати" href="{% url "students_edit" sfio.id %}">{{ sfio.first_name }} {{ sfio.last_name }} </a> </td>
                     <td> <input type="checkbox" checked> </td>
                     <td> <input type="checkbox" checked> </td>
                     <td> <input type="checkbox" >  </td>
@@ -97,78 +102,9 @@
                     <td> <input type="checkbox" >  </td>
                     <td> <input type="checkbox" checked>  </td>
                 </tr>
-                <!--Second rows-->
-                 <tr>
-                    <td> 2 </td>
-                    <td> <a title="Редагувати" href="#">Іванов Степан</a> </td>
-                    <td> <input type="checkbox" > </td>
-                    <td> <input type="checkbox" > </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" > </td>
-                    <td> <input type="checkbox" checked>  </td>
-                    <td> <input type="checkbox" checked>  </td>
-                    <td> <input type="checkbox" checked>  </td>
-                    <td> <input type="checkbox" checked>  </td>
-                    <td> <input type="checkbox" checked>  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" > </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" > </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                </tr>
-                <!--Thirth rows -->
-                <tr>
-                    <td> 3 </td>
-                    <td> <a title="Редагувати" href="#">Приблуда Семен</a> </td>
-                    <td> <input type="checkbox" > </td>
-                    <td> <input type="checkbox" > </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" > </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" > </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" > </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" checked>  </td>
-                    <td> <input type="checkbox" checked>  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                    <td> <input type="checkbox" >  </td>
-                </tr>
+
+                {% endfor %}
+
                 </tbody>
             </table>
             <!-- End Students Listing -->
