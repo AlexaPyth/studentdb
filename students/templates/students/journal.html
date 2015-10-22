@@ -1,0 +1,170 @@
+{% extends "students/base.html" %}
+<!--   завантаження додаткових тегів потрібно робити і в базовому і в дочірньому тезі;
+даний функціонал не передається при унаслідуванні шаблонів;
+   -->
+{% load static from staticfiles %}
+
+{% block meta_title %} Студенти {% endblock meta_title %}
+{% block title %} Облік Відвідування {% endblock title %}
+{% block content %}
+ <!-- Navigaciya po Mounth -->
+               <nav>
+                <ul class="pager" id="my_pager" >
+                    <li ><a href="#">&larr;</a></li>
+                    Жовтень 2015
+                    <li ><a href="#">&rarr;</a></li>
+
+                </ul>
+            </nav>
+
+            <!-- <table class="table  table-striped">   -->
+            <table >
+                <thead>
+               <tr>
+                          <th>№</th>
+                          <th>Студент</th>
+                          <th>Ср 1 </th>
+                          <th>Чт 2 </th>
+                          <th>Пн 3 </th>
+                          <th>Сб 4 </th>
+                          <th>Нд 5 </th>
+                          <th>Пн 6</th>
+                          <th>Вт 7</th>
+                          <th>Ср 8</th>
+                          <th>Чт 9</th>
+                          <th>Пн 10</th>
+                          <th>Сб 11</th>
+                          <th>НД 12</th>
+                          <th>Пн 13</th>
+                          <th>Вт 14</th>
+                          <th>Ср 15</th>
+                          <th>Чт 16</th>
+                          <th>Пн 17</th>
+                          <th>Сб 18</th>
+                          <th>НД 19</th>
+                          <th>Пн 20</th>
+                          <th>Вт 21</th>
+                          <th>Ср 22</th>
+                          <th>Чт 23</th>
+                          <th>Пн 24</th>
+                          <th>Сб 25</th>
+                          <th>НД 26</th>
+                          <th>Пн 27</th>
+                          <th>Вт 28</th>
+                          <th>Ср 29</th>
+                          <th>Чт 30</th>
+                          <th>Пн 31</th>
+                         </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td> 1 </td>
+                    <td> <a title="Редагувати" href="#">Петров Назар </a> </td>
+                    <td> <input type="checkbox" checked> </td>
+                    <td> <input type="checkbox" checked> </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" > </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" checked> </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" > </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" checked>  </td>
+                </tr>
+                <!--Second rows-->
+                 <tr>
+                    <td> 2 </td>
+                    <td> <a title="Редагувати" href="#">Іванов Степан</a> </td>
+                    <td> <input type="checkbox" > </td>
+                    <td> <input type="checkbox" > </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" > </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" > </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" > </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                </tr>
+                <!--Thirth rows -->
+                <tr>
+                    <td> 3 </td>
+                    <td> <a title="Редагувати" href="#">Приблуда Семен</a> </td>
+                    <td> <input type="checkbox" > </td>
+                    <td> <input type="checkbox" > </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" > </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" > </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" > </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" checked>  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                    <td> <input type="checkbox" >  </td>
+                </tr>
+                </tbody>
+            </table>
+            <!-- End Students Listing -->
+{% endblock content %}
