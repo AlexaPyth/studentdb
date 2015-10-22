@@ -4,6 +4,11 @@
    -->
 {% load static from staticfiles %}
 
+    {% block extra_css %}
+        <link rel="stylesheet" href="{{ PORTAL_URL }}{% static "css/gyrnal_style.css" %}">
+    {% endblock extra_css %}
+
+
 {% block meta_title %} Студенти {% endblock meta_title %}
 {% block title %} Облік Відвідування {% endblock title %}
 {% block content %}
