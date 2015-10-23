@@ -77,7 +77,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'studentdb.wsgi.application'
 
 
-# Database
+# Database MySQL - alex@alexa/ student_db
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
 DATABASES = {
