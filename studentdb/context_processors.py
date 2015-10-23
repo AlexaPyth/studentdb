@@ -6,3 +6,4 @@ def students_proc(request):
     if portal_url.endswith('/'):
         portal_url = portal_url[:-1]
     return {'PORTAL_URL': portal_url}
+
