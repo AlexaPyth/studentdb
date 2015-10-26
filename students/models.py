@@ -1,43 +1,52 @@
+# -*- coding: utf-8 -*-
 from django.db import models
 
 
 # Create your models here.
 class Student(models.Model):
     """ Student Model """
+
+    class Meta(object):
+        verbose_name = "РЎС‚СѓРґРµРЅС‚"
+        verbose_name_plural = "РЎС‚СѓРґРµРЅС‚Рё"
+
     first_name = models.CharField(
         max_length=256,
         blank=False,
-        verbose_name="Ім'я")
+        verbose_name="Р†Рј'СЏ")
 
     last_name = models.CharField(
         max_length=256,
         blank=False,
-        verbose_name="Прізвище")
+        verbose_name="РџСЂС–Р·РІРёС‰Рµ")
 
     middle_name = models.CharField(
         max_length=256,
         blank=False,
-        verbose_name="По-батькові",
+        verbose_name="РџРѕ-Р±Р°С‚СЊРєРѕРІС–",
         default='')
 
     birthday = models.DateField(
         blank=False,
-        verbose_name="Дата народження",
+        verbose_name="Р”Р°С‚Р° РЅР°СЂРѕРґР¶РµРЅРЅСЏ",
         null=True)
 
     photo = models.ImageField(
         blank=True,
-        verbose_name="Фото",
+        verbose_name="Р¤РѕС‚Рѕ",
         null=True)
 
     ticket = models.CharField(
         max_length=256,
         blank=False,
-        verbose_name="Білет")
+        verbose_name="Р‘С–Р»РµС‚")
 
     notes = models.TextField(
         blank=True,
-        verbose_name="додаткові нотатки",
+        verbose_name="Р”РѕРґР°С‚РєРѕРІС– РЅРѕС‚Р°С‚РєРё",
 
     )
+
+    def __str__(self):
+        return "%s %s" % (self.first_name, self.last_name)
 
