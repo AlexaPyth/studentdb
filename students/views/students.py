@@ -3,28 +3,30 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.http import HttpResponse
+from students.models import Student
 
-
-students = (
-        {'id':1,
-         'first_name': 'Андрій',
-         'last_name': 'Корост',
-         'ticket': 2123,
-         'image': 'img/me.jpg'},
-        {'id':2,
-         'first_name': 'Орест',
-         'last_name': 'Пивовар',
-         'ticket': 2125,
-         'image': 'img/piv.jpg'},
-        {'id': 3,
-         'first_name': 'Віталій',
-         'last_name': 'Пдоба',
-         'ticket': 2127,
-         'image': 'img/podoba.jpg'},
-    )
+#  Було на старті для Тестування
+# students = (
+#         {'id':1,
+#          'first_name': 'Андрій',
+#          'last_name': 'Корост',
+#          'ticket': 2123,
+#          'image': 'img/me.jpg'},
+#         {'id':2,
+#          'first_name': 'Орест',
+#          'last_name': 'Пивовар',
+#          'ticket': 2125,
+#          'image': 'img/piv.jpg'},
+#         {'id': 3,
+#          'first_name': 'Віталій',
+#          'last_name': 'Пдоба',
+#          'ticket': 2127,
+#          'image': 'img/podoba.jpg'},
+#     )
 
 # Views for Students
 def students_list(request):
+    students = Student.objects.all()
     return render(request, "students/students_list.html", {'students':students})
 
 def students_add(request):
