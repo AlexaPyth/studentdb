@@ -36,3 +36,8 @@ urlpatterns = [
      url(r'^journal/$', 'students.views.journal.journal', name='journal'),
 
 ]
+#для підключення MEDIA_ROOT
+from studentdb.settings import MEDIA_ROOT, DEBUG
+if DEBUG:
+# serve files from media folder
+    urlpatterns.append (url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT}))
