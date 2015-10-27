@@ -26,11 +26,11 @@ from students.models import Student
 
 # Views for Students
 def students_list(request):
-    students = Student.objects.all()
+    students = Student.objects.all().order_by('last_name')
 
     # try to order Student list
     order_by = request.GET.get('order_by')
-    if order_by in ('last_name', "first_name", 'ticket'):
+    if order_by in ('id','last_name', "first_name", 'ticket'):
         students = students.order_by(order_by)
         if request.GET.get('reverse') == '1':
             students = students.reverse()
