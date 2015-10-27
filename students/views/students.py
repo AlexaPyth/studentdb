@@ -5,6 +5,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from students.models import Student
+#from students.views.my_pagination import MyPaginator
 
 #  Було на старті для Тестування
 # students = (
@@ -36,7 +37,7 @@ def students_list(request):
         if request.GET.get('reverse') == '1':
             students = students.reverse()
 
-    # paginate students
+    # paginate students From Books
     paginator = Paginator(students, 3)
     page = request.GET.get('page')
     try:
@@ -48,6 +49,13 @@ def students_list(request):
         # If page is out of range (e.g. 9999), deliver
         # last page of results.
         students = paginator.page(paginator.num_pages)
+
+    # paginate students My
+    # paginator = MyPaginator(students, 3)
+    # page = request.GET.get('page')
+    # students = paginator.page(page)
+
+
 
     return render(request, "students/students_list.html", {'students':students})
 
