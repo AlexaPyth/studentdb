@@ -1,0 +1,141 @@
+[
+{
+    "pk": 1,
+    "model": "students.student",
+    "fields": {
+        "middle_name": "\u0421\u0430\u043d\u0438\u0447",
+        "last_name": "\u041f\u043e\u0434\u043e\u0431\u0430",
+        "student_group": null,
+        "notes": "",
+        "birthday": "2015-10-26",
+        "first_name": "\u0410\u043d\u0434\u0440\u0456\u0439\u043a\u043e",
+        "photo": "",
+        "ticket": "234"
+    }
+},
+{
+    "pk": 2,
+    "model": "students.student",
+    "fields": {
+        "middle_name": "\u0411\u0430\u0439\u043e\u0432\u0438\u0447",
+        "last_name": "\u0411\u0430\u043b\u0430\u0431\u0430\u0439\u043a\u0430",
+        "student_group": null,
+        "notes": "",
+        "birthday": "2014-04-01",
+        "first_name": "\u041e\u043b\u0435\u0433",
+        "photo": "./podoba_NiQcPkz.jpg",
+        "ticket": "911"
+    }
+},
+{
+    "pk": 3,
+    "model": "students.student",
+    "fields": {
+        "middle_name": "\u0421\u0435\u043c\u0435\u043d\u043e\u0432\u0438\u0447",
+        "last_name": "\u0421\u0435\u043c\u0435\u043d\u0447\u0435\u043d\u043a\u043e",
+        "student_group": null,
+        "notes": "",
+        "birthday": "2015-06-09",
+        "first_name": "\u0421\u0435\u043c\u0435\u043d",
+        "photo": "./piv_FBAjokx.jpg",
+        "ticket": "123"
+    }
+},
+{
+    "pk": 4,
+    "model": "students.student",
+    "fields": {
+        "middle_name": "\u041a\u043e\u0449\u0435\u0439\u043e\u0432\u0438\u0449",
+        "last_name": "\u0422\u0435\u043b\u0435\u0441\u0438\u043a",
+        "student_group": null,
+        "notes": "",
+        "birthday": "2014-12-05",
+        "first_name": "\u0406\u0432\u0430\u0441\u0438\u043a",
+        "photo": "./me_u9FNhtA.jpg",
+        "ticket": "235"
+    }
+},
+{
+    "pk": 6,
+    "model": "students.student",
+    "fields": {
+        "middle_name": "\u0406\u0433\u043e\u0440\u043e\u0432\u0438\u0447",
+        "last_name": "\u041c\u0430\u043a\u0430\u0431\u0443\u043b",
+        "student_group": null,
+        "notes": "",
+        "birthday": "2010-04-01",
+        "first_name": "\u041e\u0440\u0435\u0441\u0442",
+        "photo": "",
+        "ticket": "245"
+    }
+},
+{
+    "pk": 7,
+    "model": "students.student",
+    "fields": {
+        "middle_name": "\u042e\u0440\u0456\u043a\u043e\u0432\u0438\u0447",
+        "last_name": "\u0424\u0435\u0434\u044c\u043a\u043e",
+        "student_group": null,
+        "notes": "",
+        "birthday": "2000-10-06",
+        "first_name": "\u041d\u0430\u0437\u0430\u0440",
+        "photo": "",
+        "ticket": "458"
+    }
+},
+{
+    "pk": 8,
+    "model": "students.student",
+    "fields": {
+        "middle_name": "\u0410\u043d\u0434\u0456\u0439\u043a\u043e\u0432\u0438\u0447",
+        "last_name": "\u0414\u0435\u043e\u0433\u0430\u043d\u043e\u0432\u0438\u0447",
+        "student_group": null,
+        "notes": "",
+        "birthday": "1979-10-21",
+        "first_name": "\u042e\u0440\u0456\u0439",
+        "photo": "",
+        "ticket": "589"
+    }
+},
+{
+    "pk": 9,
+    "model": "students.student",
+    "fields": {
+        "middle_name": "\u0421\u0435\u0443\u043b\u043e\u0432\u0438\u0447",
+        "last_name": "\u0427\u0443\u0432\u0430\u043a",
+        "student_group": 2,
+        "notes": "",
+        "birthday": "2001-10-14",
+        "first_name": "\u0421\u0430\u043d\u0434\u0440\u043e",
+        "photo": "",
+        "ticket": "489"
+    }
+},
+{
+    "pk": 1,
+    "model": "students.group",
+    "fields": {
+        "title": "MTM",
+        "notes": "",
+        "leader": 1
+    }
+},
+{
+    "pk": 2,
+    "model": "students.group",
+    "fields": {
+        "title": "MTM-1",
+        "notes": "",
+        "leader": 2
+    }
+},
+{
+    "pk": 3,
+    "model": "students.group",
+    "fields": {
+        "title": "MTM-2",
+        "notes": "",
+        "leader": 3
+    }
+}
+]
