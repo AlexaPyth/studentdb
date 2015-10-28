@@ -79,20 +79,8 @@ WSGI_APPLICATION = 'studentdb.wsgi.application'
 
 # Database MySQL - alex@alexa/ student_db
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
+from .my_db import DATABASES
 
-DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    # }
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'students_db',
-        'HOST': '',
-        'USER': 'alex',
-        'PASSWORD': 'alexa',
-                }
-            }
 
 
 # Internationalization
