@@ -49,7 +49,7 @@ def students_list(request):
         # If page is out of range (e.g. 9999), deliver
         # last page of results.
         students = paginator.page(paginator.num_pages)
-
+    # students['x'] = (list(range(students.start_index(), students.end_index())))
     # paginate students My
     # paginator = MyPaginator(students, 3)
     # page = request.GET.get('page')
