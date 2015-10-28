@@ -4,7 +4,7 @@ from django.shortcuts import render
 # Create your views here.
 from django.http import HttpResponse
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from students.models import Student
+from students.models.students import Student
 #from students.views.my_pagination import MyPaginator
 
 #  Було на старті для Тестування
