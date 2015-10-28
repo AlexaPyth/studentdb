@@ -18,7 +18,7 @@ def groups_list(request):
     groups = Group.objects.all()
 
         # try to order Groups List
-    order_by = request.GET.get('order_by')
+    order_by = request.GET.get('order_by','title')
     if order_by in ('id','title','leader'):
         groups = groups.order_by(order_by)
         if request.GET.get('reverse') == '1':
