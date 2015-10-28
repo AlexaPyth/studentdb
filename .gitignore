@@ -2,6 +2,7 @@
 /__pycache__/
 /*.sqlite3
 *.jpg
+my_db.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
