@@ -27,8 +27,8 @@
                     </a></th>
                     <th>Фото</th>
                     <th><a href="{% url "home" %}?order_by=last_name{% if not order_by or order_by == 'last_name' and reverse != '1' %}&amp;reverse=1{% endif %} ">
-                        Прізвище
-                        {% if not order_by or order_by == 'last_name' and reverse != '1' %}&uarr;
+                        Прізвище{% if not order_by  %}&uarr;{% endif %}
+                        {% if order_by == 'last_name' and reverse != '1' %}&uarr;
                         {% elif order_by == 'last_name' and reverse == '1' %}&darr;
                         {% endif %}
                     </a></th>
