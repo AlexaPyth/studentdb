@@ -48,7 +48,7 @@
                 </thead>
                {% endwith %}
                 <tbody>
-                {% for student in students %}
+                {% for student in otvetka %}
                 <tr>
                     <td>{{ forloop.counter }}</td>
                         <td>
@@ -89,6 +89,6 @@
                 </tbody>
             </table>
             <!-- End Students Listing -->
-{% include 'students/pagination_student.html' %}
+{% include 'students/pagination_otvetka.html' %}
 {% endblock content %}
 

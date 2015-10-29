@@ -57,7 +57,7 @@ def students_list(request):
 
 
 
-    return render(request, "students/students_list.html", {'students':students})
+    return render(request, "students/students_list.html", {'otvetka':students})
 
 def students_add(request):
     # testa = request.META['SERVER_NAME']
