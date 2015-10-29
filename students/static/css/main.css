@@ -2,6 +2,12 @@
 h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
+/* footer in bootom*/
+.footer {
+    bottom: 0;
+    height: 60px;
+    position: absolute;
+}
 
 /* Це коментар в CSS */
 .alert {
