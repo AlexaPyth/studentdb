@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.db import models
+
+
 class Group(models.Model):
     """ Group Model """
 
@@ -12,7 +14,8 @@ class Group(models.Model):
         blank=False,
         verbose_name="Назва")
 
-    leader = models.OneToOneField('Student',
+    leader = models.OneToOneField(
+        'Student',
         verbose_name="Староста",
         blank=True,
         null=True,
@@ -28,4 +31,3 @@ class Group(models.Model):
             return "%s (%s %s)" % (self.title, self.leader.first_name, self.leader.last_name)
         else:
             return "%s" % (self.title,)
-
