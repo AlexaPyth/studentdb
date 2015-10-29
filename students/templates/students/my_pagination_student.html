@@ -1,6 +1,7 @@
      {% block pagination %}
+{# Пагінація заточенна суто під students_list.html #}
  <!-- Pagination -->
-         {% if students.num_pages > 1 %}
+         {% if students.has_other_pages %}
           {% with  order_by=request.GET.order_by reverse=request.GET.reverse  %}
 
             <nav>
