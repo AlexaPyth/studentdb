@@ -28,12 +28,19 @@ urlpatterns = [
     #Groups List urls
     url(r'^groups/$', 'students.views.groups.groups_list', name='groups'),
     url(r'^groups/add/$', 'students.views.groups.groups_add', name='groups_add'),
-
     url(r'^groups/(?P<gid>\d+)/edit/$', 'students.views.groups.groups_edit', name='groups_edit'),
         url(r'^groups/(?P<gid>\d+)/delete/$', 'students.views.groups.groups_delete', name='groups_delete'),
 
     #Journal
-     url(r'^journal/$', 'students.views.journal.journal', name='journal'),
+    url(r'^journal/$', 'students.views.journal.journal', name='journal'),
+
+    #Ekzamen List urls
+    url(r'^ekzamens/$', 'students.views.ekzamens.ekzamens_list', name='ekzamens'),
+    url(r'^ekzamens/add/$', 'students.views.ekzamens.ekzamens_add', name='ekzamens_add'),
+    url(r'^ekzamens/(?P<kid>\d+)/edit/$', 'students.views.ekzamens.ekzamens_edit', name='ekzamens_edit'),
+    url(r'^ekzamens/(?P<kid>\d+)/delete/$', 'students.views.ekzamens.ekzamens_delete', name='ekzamens_delete'),
+
+
 
 ]
 #для підключення MEDIA_ROOT
