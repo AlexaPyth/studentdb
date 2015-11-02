@@ -5,6 +5,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from students.models.students import Student
+from students.models.groups import Group
 #from students.views.my_pagination import MyPaginator
 
 #  Було на старті для Тестування
@@ -62,7 +63,22 @@ def students_list(request):
 def students_add(request):
     # testa = request.META['SERVER_NAME']
     # print(request.build_absolute_uri('/'))
-    return HttpResponse("Add students")
+    '''         Метакод
+         Якщо форма була запощена:
+    Якщо кнопка Скасувати була натиснута:
+        Повертаємо користувача до списку студентів
+    Якщо кнопка Додати була натиснута:
+        Перевіряємо дані на коректність та збираємо помилки
+    Якщо дані були введені некоректно:
+        Віддаємо шаблон форми разом із знайденими помилками
+    Якщо дані були введені коректно:
+        Створюємо та зберігаємо студента в базу
+        Повертаємо користувача до списку студентів
+     Якщо форма не була запощена:
+        повертаємо код початкового стану форми
+    '''
+
+    return render(request, "students/students_add.html", {'groups': Group.objects.all().order_by('title')})
 
 def students_edit(request, sid):
     return HttpResponse("Edit students %s" % sid)
