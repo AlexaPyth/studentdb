@@ -8,25 +8,46 @@
 {% block title %} Додати Студента {% endblock title %}
 {% block content %}
 
-    <form action="{% url "students_add" %}" method="post" enctype="multipart/form-data" >
-<div >
-     <label for="first_name">Ім'я</label>
-     <input type="text" value="" name="first_name" id="first_name" placeholder="Введіть ваше ім'я" />
+    {% block status_message %}
+        {% if errors %}
+        <div class="alert alert-warning" role="alert">
+            Будь-ласка, виправте наступні помилки
+        </div>
+        {% endif %}
+    {% endblock status_message %}
+
+    <form action="{% url "students_add" %}" method="post" enctype="multipart/form-data" role="form" class="form-horizontal" >
+    {% csrf_token %}
+<div class="form-group {% if errors.first_name %}has-error{% endif %}">
+     <label for="first_name" class="col-sm-2 control-label">Ім'я*</label>
+  <div class="col-sm-10">
+     <input type="text" value="{{ request.POST.first_name }}" name="first_name" id="first_name" class="form-control" placeholder="Введіть ваше ім'я" />
+     <span class="help-block">{{ errors.first_name }}</span>
+  </div>
 </div>
 
-<div>
-    <label for="last_name">Прізвище</label>
-    <input type="text" value="" name="last_name" placeholder="Введіть ваше прізвище" />
+<div class="form-group {% if errors.last_name %}has-error{% endif %}">
+    <label for="last_name" class="col-sm-2 control-label">Прізвище*</label>
+  <div class="col-sm-10">
+    <input type="text" value="{{ request.POST.last_name }}" name="last_name" placeholder="Введіть ваше прізвище" class="form-control" />
+    <span class="help-block">{{ errors.last_name }}</span>
+  </div>
 </div>
 
-<div>
-    <label for="middle_name">По-батькові</label>
-    <input type="text" value="" name="middle_name" id="middle_name" placeholder="Введіть ваше по-батькові" />
+<div class="form-group {% if errors.middle_name %}has-error{% endif %}">
+    <label for="middle_name"  class="col-sm-2 control-label" >По-батькові</label>
+  <div class="col-sm-10">
+    <input type="text" value="{{ request.POST.middle_name }}" name="middle_name" id="middle_name"
+           placeholder="Введіть ваше по-батькові" class="form-control" />
+  </div>
 </div>
 
-<div>
-    <label for="birthday">Дата народження</label>
-    <input type="text" value="" name="birthday" id="birthday" placeholder="Напр. 1984-12-30" />
+<div class="form-group {% if errors.birthday %}has-error{% endif %}">
+    <label for="birthday" class="col-sm-2 control-label" >Дата народження*</label>
+  <div class="col-sm-10">
+    <input type="text" value="{{ request.POST.birthday }}" name="birthday" id="birthday" placeholder="Напр. 1984-12-30"  class="form-control"  />
+    <span class="help-block">{{ errors.birthday }}</span>
+  </div>
 </div>
 
 <div>
@@ -35,18 +56,23 @@
 </div>
 
 <div>
-    <label for="ticket">Білет</label>
-    <input type="text" value="" name="ticket" placeholder="Введіть номер білета">
+    <label for="ticket">Білет*</label>
+    <input type="text" value="{{ request.POST.ticket }}" name="ticket" placeholder="Введіть номер білета">
+    <span class="help-block">{{ errors.ticket }}</span>
 </div>
 
 <div>
-    <label for="student_group">Група</label>
-    <select name="student_group" id="student_group">
+    <label for="student_group">Група*</label>
+    <select name="student_group" id="student_group" class="form-control">
         <option value="">Виберіть групу</option>
         {% for group in groups %}
-        <option value="{{ group.id }}">{{ group.title }}</option>
+        <option value="{{ group.id }}"
+     {% if group.id == request.POST.student_group|add:0 %}selected="1"{% endif %}>
+            {{ group.title }}
+        </option>
         {% endfor %}
     </select>
+    <span class="help-block">{{ errors.student_group }}</span>
 </div>
 
 <div>
@@ -56,6 +82,7 @@
 
 <div>
     <input type="submit" value="Додати" name="add_button">
+    <button type="submit" name="cancel_button">Скасувати</button>
 </div>
 
  </form>
