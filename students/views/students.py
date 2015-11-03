@@ -2,8 +2,10 @@
 from django.shortcuts import render
 
 # Create your views here.
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
+from django.core.urlresolvers import reverse
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from datetime import datetime
 from students.models.students import Student
 from students.models.groups import Group
 #from students.views.my_pagination import MyPaginator
@@ -77,8 +79,96 @@ def students_add(request):
      Якщо форма не була запощена:
         повертаємо код початкового стану форми
     '''
+    # was form Posted?
+    if request.method =='POST':
+        # was form add button clicked?
+        if request.POST.get('add_button') is not None:
 
-    return render(request, "students/students_add.html", {'groups': Group.objects.all().order_by('title')})
+            # TODO: validate input from user
+            # error colections
+            errors = {}
+
+            # validate student data will go here
+            data = {'middle_name': request.POST.get('middle_name'),
+                    'note': request.POST.get('notes')}
+
+            # validate user input
+            first_name = request.POST.get('first_name', '').strip()
+            if not first_name:
+                errors['first_name'] = "Ім'я є обовязковим "
+            else:
+                data['first_name'] = first_name
+
+            last_name = request.POST.get('last_name', '').strip()
+            if not last_name:
+                errors['last_name'] = "Прізвище є обовязковим "
+            else:
+                data['last_name'] = last_name
+
+            birthday = request.POST.get('birthday', '').strip()
+            if not birthday:
+                errors['birthday'] = "Дата народження є обовязковою "
+            else:
+                try:
+                    datetime.strptime(birthday, '%Y-%m-%d')
+                except Exception:
+                    errors['birthday'] = 'Введіть коректний формат дати (напр. 1975-10-28)'
+                else:
+                    data['birthday'] = birthday
+
+            ticket = request.POST.get('ticket', '').strip()
+            if not ticket:
+                errors['ticket'] = "Номер білета є обовязковим "
+            else:
+                data['ticket'] = ticket
+
+            student_group = request.POST.get('student_group', '').strip()
+            if not student_group:
+                errors['student_group'] = 'Оберіть групу для студента'
+            else:
+                groups = Group.objects.filter(pk = student_group)
+                if len(groups) !=1:
+                    errors['student_group'] = "Оберіть коректну групу"
+                else:
+                    data['student_group'] = groups[0]
+
+            photo = request.FILES.get('photo')
+            if photo:
+                data['photo'] = photo
+
+            # save student
+            if not errors:
+                student = Student(**data)  # як варіант через перевірку словника errors
+
+                # create Student Object  - вважаєм що всі дані внесенно і вони правильні!
+                # student = Student(
+                #     first_name = request.POST['first_name'],
+                #     last_name = request.POST['last_name'],
+                #     middle_name = request.POST['middle_name'],
+                #     birthday = request.POST['birthday'],
+                #     ticket = request.POST['ticket'],
+                #     student_group = Group.objects.get(pk = request.POST['student_group']),
+                #     photo = request.FILES['photo'],
+                # )
+
+                # save it to database
+                student.save()
+
+                # redirect user to student list
+                return HttpResponseRedirect('%s?status_message=Студента успішно додано!' % reverse('home'))
+            else:
+                # render form with errors and previous user input
+                return render(request, 'students/students_add.html',
+                              {'groups': Group.objects.all().order_by('title'),
+                               'errors': errors})
+        elif request.POST.get('cansel_button') is not None:
+            # redirect to home page on Cansel Button
+            return HttpResponseRedirect('%s?status_message=Додавання студента скасовано!' % reverse('home'))
+    else:
+        # initial form render
+        return render(request, 'students/students_add.html',
+                     {'groups' : Group.objects.all().order_by('title')})
+
 
 def students_edit(request, sid):
     return HttpResponse("Edit students %s" % sid)
