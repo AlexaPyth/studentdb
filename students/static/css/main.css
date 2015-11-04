@@ -3,10 +3,21 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 /* footer in bootom*/
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
 .footer {
-    bottom: 0;
-    height: 60px;
-    position: absolute;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+
 }
 
 /* Це коментар в CSS */
@@ -22,7 +33,7 @@ footer */
     лінії */
     border-top: 1px solid #dddddd;
     /* задаємо внутрішню відстань елемента до верхнього краю */
-    padding-top: 10px;
+    padding-top: 15px;
 }
 
 /* Groups Selector */
@@ -40,3 +51,6 @@ footer */
     color: #555555;
 }
 /* oformlenie Formu Edit Studenta */
+textarea, select,input{
+    max-width: 300px;
+}
