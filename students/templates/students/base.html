@@ -78,6 +78,8 @@
                         <a href="{% url "groups" %}">Групи</a></li>
                 <li role="presentation" {% if url_ekzamens in request.path %} class = "active" {% endif %}>
                         <a href="{% url "ekzamens" %}">Екзамени</a></li>
+                <li role="presentation" {% if '/contact-admin' in request.path %} class = "active" {% endif %}>
+                        <a href="{% url "contact_admin" %}">Контакт</a></li>
             </ul>
         </div>
     </div>
