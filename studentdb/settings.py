@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
 
     'students',
 )
@@ -110,3 +111,4 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,  'media')
 
 ADMIN_EMAIL = 'test@ukr.net'
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
