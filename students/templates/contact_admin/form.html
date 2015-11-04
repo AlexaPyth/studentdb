@@ -1,0 +1,17 @@
+{% extends "students/base.html" %}
+<!--   завантаження додаткових тегів потрібно робити і в базовому і в дочірньому тезі;
+даний функціонал не передається при унаслідуванні шаблонів;
+   -->
+{% load static from staticfiles %}
+
+{% block meta_title %} Зв'язок з Адміністратором {% endblock meta_title %}
+
+
+
+{% block title %} Зв'язок з Адміністратором {% endblock title %}
+{% block content %}
+
+    Тут буде форма контакту
+
+{% endblock content %}
+
