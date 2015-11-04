@@ -90,7 +90,7 @@ def students_add(request):
 
             # validate student data will go here
             data = {'middle_name': request.POST.get('middle_name'),
-                    'note': request.POST.get('notes')}
+                    'notes': request.POST.get('notes')}
 
             # validate user input
             first_name = request.POST.get('first_name', '').strip()
@@ -161,7 +161,7 @@ def students_add(request):
                 return render(request, 'students/students_add.html',
                               {'groups': Group.objects.all().order_by('title'),
                                'errors': errors})
-        elif request.POST.get('cansel_button') is not None:
+        elif request.POST.get('cancel_button') is not None:
             # redirect to home page on Cansel Button
             return HttpResponseRedirect('%s?status_message=Додавання студента скасовано!' % reverse('home'))
     else:
