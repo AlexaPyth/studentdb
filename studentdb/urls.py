@@ -40,7 +40,8 @@ urlpatterns = [
     url(r'^ekzamens/(?P<kid>\d+)/edit/$', 'students.views.ekzamens.ekzamens_edit', name='ekzamens_edit'),
     url(r'^ekzamens/(?P<kid>\d+)/delete/$', 'students.views.ekzamens.ekzamens_delete', name='ekzamens_delete'),
 
-
+    # Contact Admin Form
+    url(r'^contact-admin/$', 'students.views.contact_admin.contact_admin', name='contact_admin'),
 
 ]
 #для підключення MEDIA_ROOT
