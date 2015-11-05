@@ -9,6 +9,8 @@ from datetime import datetime
 from students.models.students import Student
 from students.models.groups import Group
 #from students.views.my_pagination import MyPaginator
+from django.views.generic import UpdateView
+
 
 #  Було на старті для Тестування
 # students = (
@@ -28,6 +30,21 @@ from students.models.groups import Group
 #          'ticket': 2127,
 #          'image': 'img/podoba.jpg'},
 #     )
+
+class StudentUpdateView(UpdateView ):
+    model = Student
+    template_name = 'students/students_edit.html'
+
+    def get_success_url(self):
+        return '%s?status_message=Студента успішно збережено!' % reverse('home')
+
+    def post(self, request, *args, **kwargs):
+        if request.POST.get('cancel_button'):
+            return HttpResponseRedirect(
+                '%s?status_message=Редагування студента відмінено!' % reverse('home'))
+        else:
+            return super(StudentUpdateView, self).post(request, *args, **kwargs)
+
 
 # Views for Students
 def students_list(request):
